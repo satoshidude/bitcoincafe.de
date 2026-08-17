@@ -1,0 +1,14 @@
+{
+  "name": "bitcoincafe-pipeline",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "BitcoinCafe Content-Pipeline: RSS → LLM → Nostr Drafts",
+  "scripts": {
+    "fetch": "node fetch-and-draft.js",
+    "test": "node fetch-and-draft.js --dry-run"
+  },
+  "dependencies": {
+    "nostr-tools": "^2.23.0",
+    "websocket-polyfill": "^0.0.3"
+  }
+}

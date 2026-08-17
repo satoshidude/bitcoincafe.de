@@ -1,0 +1,41 @@
+@import 'tailwindcss';
+
+@theme {
+	--color-accent: #ff9d2e;
+	--color-accent-hover: #ffb45c;
+	--color-bg-primary: #120d0a;
+	--color-bg-secondary: #201713;
+	--color-bg-card: #1a120f;
+	--color-text-primary: #f5ead8;
+	--color-text-secondary: #b9a791;
+	--color-border: #49352a;
+	--color-success: #71d99b;
+}
+
+:root { color-scheme: dark; }
+html { min-height: 100%; background: #120d0a; }
+body {
+	min-height: 100vh;
+	margin: 0;
+	font-family: Georgia, 'Times New Roman', serif;
+	background: radial-gradient(circle at 50% -10%, rgba(255,112,24,.13), transparent 36rem), linear-gradient(90deg, rgba(255,255,255,.015) 1px, transparent 1px), #120d0a;
+	background-size: auto, 34px 34px, auto;
+	color: var(--color-text-primary);
+	-webkit-tap-highlight-color: transparent;
+}
+body::before {
+	content: '';
+	position: fixed;
+	inset: 0;
+	pointer-events: none;
+	opacity: .18;
+	background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.12'/%3E%3C/svg%3E");
+}
+h1, h2, h3, h4, h5, h6 { font-family: 'Arial Narrow', 'Helvetica Neue', system-ui, sans-serif; letter-spacing: .01em; }
+nav, button, input, select, textarea, .font-sans { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+a, button { outline-offset: 4px; }
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible { outline: 2px solid #ff9d2e; }
+.menu-page { position: relative; border: 1px solid rgba(213,167,113,.22); border-radius: 2px 18px 2px 18px; background: linear-gradient(135deg, rgba(36,25,20,.96), rgba(20,14,11,.98)); box-shadow: 0 24px 80px rgba(0,0,0,.28), inset 0 0 45px rgba(255,153,51,.025); }
+.menu-kicker { font: 600 .68rem/1 ui-monospace, monospace; letter-spacing: .22em; text-transform: uppercase; color: #ff9d2e; }
+.neon-text { color: #ffd5a1; text-shadow: 0 0 4px #ff9d2e, 0 0 15px rgba(255,114,24,.75), 0 0 36px rgba(255,83,13,.35); }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; } }
